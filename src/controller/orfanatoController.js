@@ -27,7 +27,9 @@ module.exports = {
           telefone,
           intrucoes,
           h_visita,
-          fim_semana
+          fim_semana,
+          latitude,
+          longitude
         }).then(message =>{
           return  response.status(200).json({success:'success'});
         }).catch(err =>{
