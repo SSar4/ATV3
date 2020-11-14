@@ -3,16 +3,10 @@ import { Request, Response, NextFunction } from 'express';
 import connection from '../database/conection'
 
 class orfanatoController {
-  async index(request: Request, response: Response, next: NextFunction){
-   
-    const {page = 1} = request.query;
-    const [count] = await connection('orfanato').count();
+  async index(request: Request, response: Response){
+    const result = await connection('orfanato').select('orfanato.*')
+    return response.json(result)   
     
-   const orfanato = await connection('orfanato').limit(10).
-   offset((page -1)*10).select('id','nome');
-   
-   response.header('X-Total-Count',count['count(*)']);
-    response.json({orfanato})
 
  }
   

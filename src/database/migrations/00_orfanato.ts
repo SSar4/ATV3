@@ -11,8 +11,8 @@ export async function up(knex: knex){
         table.string('intrucoes').notNullable();
         table.string('h_visita').notNullable();
         table.boolean('fim_semana').notNullable();
-        table.boolean('longitude').notNullable();
-        table.boolean('latitude').notNullable()
+        table.string('longitude').notNullable();
+        table.string('latitude').notNullable()
     });
 
 

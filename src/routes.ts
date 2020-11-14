@@ -13,4 +13,6 @@ routes.get('/',(req,res)=>{
 });
 
 routes.post('/orfanato', orfController.create)
+routes.get('/orfanato/:id',orfController.findOne)
+routes.get('/orfanato', orfController.index)
 export default  routes;
