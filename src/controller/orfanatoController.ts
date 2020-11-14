@@ -1,5 +1,4 @@
 import { Request, Response, NextFunction } from 'express';
-
 import conection from '../database/conection'
 
 class orfanatoController {

@@ -1,7 +1,14 @@
-import  express from 'express'
+import express from 'express'
+
+import OrfanatoController from './controller/orfanatoController'
+
+
 const routes = express.Router();
 
-routes.get('/', (req,res)=>{
-    res.json({'test':'test'})
+//ESTOU CHAMANDO A MINHA CLASSE CRIANDO UM OBJRTO A PARTIR DISSO
+const orfController = new OrfanatoController();
+
+routes.get('/',(req,res)=>{
+    res.send('inicio...')
 });
 export default  routes;
