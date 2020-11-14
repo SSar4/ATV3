@@ -11,4 +11,6 @@ const orfController = new OrfanatoController();
 routes.get('/',(req,res)=>{
     res.send('inicio...')
 });
+
+routes.post('/orfanato', orfController.create)
 export default  routes;
